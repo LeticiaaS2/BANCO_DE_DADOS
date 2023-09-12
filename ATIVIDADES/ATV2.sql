@@ -28,6 +28,7 @@ Ccliente INT (8) NOT NULL,
 Cproduto INT (8) NOT NULL,
 Quantidade FLOAT (13, 3) CHECK (Quantidade>0) NOT NULL,
 PRIMARY KEY (Cvenda, Ccliente, Cproduto),
-FOREIGN KEY (Ccliente) REFERENCES vendas (Ccliente),
+FOREIGN KEY (Ccliente) REFERENCES vendas (CVenda),
 FOREIGN KEY (Cvenda) REFERENCES vendas (Cvenda),
 FOREIGN KEY (Cproduto) REFERENCES produtos (Cproduto));
+
